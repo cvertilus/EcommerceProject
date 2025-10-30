@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "Zapatillas Urbanas",
+    "descripcion": "Zapatillas cómodas para uso diario",
+    "precio": 34999,
+    "stock": 25,
+    "categoria": "calzado",
+    "imagen": "/img/zapatillas.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Remera Oversize",
+    "descripcion": "Remera unisex de algodón orgánico",
+    "precio": 10999,
+    "stock": 50,
+    "categoria": "ropa",
+    "imagen": "/img/Remera_Oversize.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Gorra Snapback",
+    "descripcion": "Gorra estilo urbano con logo bordado",
+    "precio": 7999,
+    "stock": 15,
+    "categoria": "accesorios",
+    "imagen": "/img/gorra.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Gorra Snapback",
+    "descripcion": "Gorra estilo urbano con logo bordado",
+    "precio": 7999,
+    "stock": 15,
+    "categoria": "accesorios",
+   "imagen": "/img/gorra.webp"
+  },
+  {
+    "id": 5,
+    "nombre": "Gorra Snapback",
+    "descripcion": "Gorra estilo urbano con logo bordado",
+    "precio": 7999,
+    "stock": 15,
+    "categoria": "accesorios",
+    "imagen": "/img/gorra.webp"
+  },
+  {
+    "id": 6,
+    "nombre": "Gorra Snapback",
+    "descripcion": "Gorra estilo urbano con logo bordado",
+    "precio": 7999,
+    "stock": 15,
+    "categoria": "accesorios",
+    "imagen": "/img/gorra.webp"
+  }
+]
