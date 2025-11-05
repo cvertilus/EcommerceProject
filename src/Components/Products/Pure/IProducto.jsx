@@ -38,7 +38,7 @@ export default function IProducto({ producto, onClick, children }) {
                 }}
                 
             />
-            <CardContent>
+            <CardContent sx={{padding:"1px", marginTop:"10px"}}>
                 {producto.descripcion}
             </CardContent>
         </Box>

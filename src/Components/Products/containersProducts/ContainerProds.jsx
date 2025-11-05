@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductsList from '../Pure/ProductsList'
+import { CircularProgress } from '@mui/material'
 
 export default function ContainerProds() {
     const [products, setProducts] = React.useState(null)
@@ -23,7 +24,7 @@ export default function ContainerProds() {
             {products ? (
                 <ProductsList ListaDeProductos={products} />
             ) : (
-                <h2>Loading...</h2>
+                <CircularProgress /> 
             )}
 
         </>

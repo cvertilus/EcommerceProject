@@ -7,6 +7,8 @@ import HomePage from './Pages/HomePage'
 import ProductDetail from './Components/Products/Pure/ProductDetail'
 import  CartProvider  from './Context/cartProvider'
 import Cart from './Components/Cart/Cart'
+import NavBar from './Components/NavBar/NavBar'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
     <>
       <CartProvider>
         <Router>
+        <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
@@ -24,6 +27,7 @@ function App() {
             <Route path="/about" element={<HomePage />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
+          <Footer />
         </Router>
       </CartProvider>
 
