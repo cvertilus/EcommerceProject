@@ -5,7 +5,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './Pages/HomePage'
 import ProductDetail from './Components/Products/Pure/ProductDetail'
-import CartProvider from './Context/cartProvider'
+import CartProvider from './Context/CartProvider.jsx'
 import Cart from './Components/Cart/Cart'
 
 import Footer from './Components/Footer/Footer'
