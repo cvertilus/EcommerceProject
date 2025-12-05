@@ -13,7 +13,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { AppBar, Toolbar, Typography, Button, } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { useCart } from '../../Context/useCart';
+import { useCart } from '../../Context/CartContext/useCart';
 
 export default function NavBar() {
     const {totalProducto} =  useCart();
