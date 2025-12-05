@@ -1,9 +1,10 @@
 import React from 'react'
-import { Card, CardHeader, CardMedia, CardContent, CardActionArea,Box } from '@mui/material';
+import { Card, CardHeader, CardMedia, CardContent, CardActions,Box } from '@mui/material';
+import ActionProduct from './ActionProduct';
 
 
 
-export default function IProducto({ producto, onClick, children }) {
+export default function IProducto({ producto, onClick}) {
 
 
     return (
@@ -43,9 +44,9 @@ export default function IProducto({ producto, onClick, children }) {
             </CardContent>
         </Box>
 
-            <CardActionArea>
-                {children}
-            </CardActionArea>
+            <CardActions>
+            <ActionProduct producto={producto} />
+            </CardActions>
 
                        
         </Card>

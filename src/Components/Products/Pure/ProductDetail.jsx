@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
-import { Card, CardContent, CardHeader, CardMedia, Box, CardActionArea, CircularProgress,Rating } from '@mui/material'
+import { Card, CardContent, CardHeader, CardMedia, Box, CardActions, CircularProgress,Rating } from '@mui/material'
 import ActionProduct from './ActionProduct';
+import { getProductsById } from '../../../services/productsService';
 
 function ProductDetail() {
     const params = useParams();
@@ -10,14 +11,14 @@ function ProductDetail() {
 
     React.useEffect(() => {
         setTimeout(() => {
-            fetch("/api/productos.json")
-                .then(res => res.json())
-                .then(data => {
-                    const prod = data.find(p => p.id === parseInt(params.id));
-                    setProduct(prod);
-                })
-                .catch(err => console.log(err));
-        }, 1000);
+            getProductsById(params.id)
+            .then((data) => {
+                setProduct(data);
+            })
+            .catch((error) => {
+                console.error("Error fetching product:", error);
+            });
+        }, 100);
     })
 
     return (
@@ -77,9 +78,9 @@ function ProductDetail() {
                     </CardContent>
 
 
-                    <CardActionArea >
+                    <CardActions >
                         <ActionProduct producto={product} />
-                    </CardActionArea>
+                    </CardActions>
 
                 </Card>
                 </Box>

@@ -5,10 +5,15 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './Pages/HomePage'
 import ProductDetail from './Components/Products/Pure/ProductDetail'
-import  CartProvider  from './Context/cartProvider'
+import CartProvider from './Context/cartProvider'
 import Cart from './Components/Cart/Cart'
-import NavBar from './Components/NavBar/NavBar'
+
 import Footer from './Components/Footer/Footer'
+import ProductFormContainer from './Components/adminComponents/ProductFormContainer/ProductFormContainer'
+import MainLayout from './layouts/MainLayout'
+import AdminLayout from './layouts/AdminLayout'
+import RutaProtegida from './Components/RutaProtegida/RutaProtegida'
+import Login from './Components/Login/Login'
 
 function App() {
 
@@ -17,15 +22,29 @@ function App() {
     <>
       <CartProvider>
         <Router>
-        <NavBar />
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/products" element={<HomePage />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
-            <Route path="/contact" element={<HomePage />} />
-            <Route path="/about" element={<HomePage />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route element={<MainLayout />}>
+
+
+              <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/products" element={<HomePage />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
+              <Route path="/contact" element={<HomePage />} />
+              <Route path="/about" element={<HomePage />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="*" element={<h1>404 - Not Found</h1>} />
+            </Route>
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<Login />} />
+              <Route path="alta-productos" element={
+                <RutaProtegida>
+                  <ProductFormContainer />
+                </RutaProtegida>
+              }/>
+              
+            </Route>
+
           </Routes>
           <Footer />
         </Router>

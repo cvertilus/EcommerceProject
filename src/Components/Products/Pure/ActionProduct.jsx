@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 import { useCart } from '../../../Context/useCart';
 
 export default function ActionProduct({ producto }) {
@@ -12,6 +12,7 @@ export default function ActionProduct({ producto }) {
         setCount(count + 1)
         addToCart(producto);
     }
+
     const QuitarProducto = (producto) => {
         if (count > 0) {
             setCount(count - 1)
@@ -23,11 +24,15 @@ export default function ActionProduct({ producto }) {
 
     return (
         <>
-            <Button onClick={() => { QuitarProducto(producto) }} sx={{ fontWeight: "Bold", fontSize: "20px" }}>
-                -
-            </Button>
-            <span style={{ margin: "0 10px" }}> {count} </span>
-            <Button onClick={() => { AgregarProducto(producto) }} sx={{ fontWeight: "Bold", fontSize: "20px" }}> + </Button>
+            <Container>
+
+
+                <Button onClick={() => { QuitarProducto(producto) }} sx={{ fontWeight: "Bold", fontSize: "20px" }}>
+                    -
+                </Button>
+                <span style={{ margin: "0 10px" }}> {count} </span>
+                <Button onClick={() => { AgregarProducto(producto) }} sx={{ fontWeight: "Bold", fontSize: "20px" }}> + </Button>
+            </Container>
         </>
     )
 }
