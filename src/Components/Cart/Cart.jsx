@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCart } from '../../Context/useCart'
+import { useCart } from '../../Context/CartContext/useCart'
 import IProducto from '../Products/Pure/IProducto';
 import ActionProduct from '../Products/Pure/ActionProduct';
 import { Box, Button } from '@mui/material';
