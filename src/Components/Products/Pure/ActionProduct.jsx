@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Container } from '@mui/material';
-import { useCart } from '../../../Context/useCart';
+import { useCart } from '../../../Context/CartContext/useCart';
 
 export default function ActionProduct({ producto }) {
     const iniciar = producto.quantity || 0;
