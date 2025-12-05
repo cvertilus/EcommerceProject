@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useAuthContext } from '../../Context/AuthContext/useAuthContext.js';
+import { useAuthContext } from '../../Context/AuthContext/useAuthContext';
 import { Container } from '@mui/material';
 
 export default function Login() {
